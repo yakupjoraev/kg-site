@@ -24,7 +24,7 @@
   margin-right: 80px;
 
   @media (max-width:1200px) {
-    margin-right: 40px;
+    margin-right: 20px;
   }
 
   @media (max-width: $breakpoint768) {
@@ -53,7 +53,7 @@
   &__item-link {
     font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 1.2;
+    letter-spacing: 1.2px;
     color: var(--main-color);
 
     opacity: 0.5;
@@ -84,7 +84,7 @@
   margin-left: 50px;
 
   @media (max-width:1200px) {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 }
 
@@ -92,6 +92,10 @@
   display: flex;
   align-items: center;
   column-gap: 20px;
+
+  @media (max-width:1200px) {
+    column-gap: 15px;
+  }
 }
 
 .socials__item {}
@@ -103,6 +107,10 @@
     opacity: 0.5;
 
     transition: opacity 0.2s linear;
+
+    @media (max-width:1200px) {
+      width: 16px;
+    }
 
     @media (min-width: 992px) {
       &:hover {
@@ -127,6 +135,10 @@
       background-color: var(--second-color);
       color: var(--white-color);
     }
+  }
+
+  @media (max-width:1200px) {
+    font-size: 18px;
   }
 
   @media (max-width: $breakpoint768) {
