@@ -7,25 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
 </head>
 
 <body class="main__body">
   <!-- Header -->
   @@include('./html/_header.html')
-  @@include('./html/_hero.html')
-  @@include('./html/_about.html')
-  @@include('./html/_leaders.html')
-  @@include('./html/_services.html')
-  @@include('./html/_calculation.html')
 
   <!-- Main Page -->
-  <main></main>
+  <main>
+    @@include('./html/_hero.html')
+    @@include('./html/_about.html')
+    @@include('./html/_leaders.html')
+    @@include('./html/_services.html')
+    @@include('./html/_calculation.html')
+    @@include('./html/_subscription-experts.html')
+    @@include('./html/_cases.html')
+    @@include('./html/_crm.html')
+    @@include('./html/_map.html')
+  </main>
 
   <!-- Footer -->
-  <!-- @@include('./html/_footer.html') -->
+  @@include('./html/_footer.html')
 
 </body>
 
+<script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 </html>
