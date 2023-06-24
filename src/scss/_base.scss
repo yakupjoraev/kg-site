@@ -51,3 +51,19 @@
     color: var(--white-color);
   }
 }
+
+.main-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  color: var(--main-color);
+
+  @media (max-width: $breakpoint992) {
+    font-size: 30px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 24px;
+  }
+
+}
