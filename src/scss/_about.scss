@@ -29,6 +29,10 @@
     position: relative;
     flex: 0 1 560px;
 
+    iframe {
+      border-radius: 6px;
+    }
+
     @media (max-width: $breakpoint992) {
       flex: 0 1 auto;
     }

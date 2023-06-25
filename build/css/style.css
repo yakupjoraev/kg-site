@@ -468,6 +468,10 @@ body.locked {
           flex: 0 1 560px;
 }
 
+.about__video iframe {
+  border-radius: 6px;
+}
+
 .about__info {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 520px;
