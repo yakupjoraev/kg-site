@@ -11,25 +11,51 @@
 </head>
 
 <body class="main__body">
-  <!-- Header -->
-  @@include('./html/_header.html')
-
-  <!-- Main Page -->
   <main>
-    @@include('./html/_hero.html')
-    @@include('./html/_about.html')
-    @@include('./html/_leaders.html')
-    @@include('./html/_services.html')
-    @@include('./html/_calculation.html')
-    @@include('./html/_subscription-experts.html')
-    @@include('./html/_cases.html')
-    @@include('./html/_crm.html')
-    @@include('./html/_map.html')
+    <div class="container">
+      <div class="pages">
+        <ul class="pages__list">
+          <li class="pages__item">
+            <a class="pages__link" href="main.html" target="_blank">
+              Главная
+            </a>
+          </li>
+
+          <li class="pages__item">
+            <a class="pages__link" href="integrated-implementation.html" target="_blank">
+              Комплесное внедрение Битрикс24
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <style>
+      .pages__list {
+        display: grid;
+        gap: 20px;
+        padding: 50px 0;
+      }
+
+      .pages__item {
+        display: grid;
+      }
+
+      .pages__link {
+        padding: 20px;
+        background-color: var(--second-color);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: var(--text-color);
+      }
+
+      .pages__link:hover {
+        color: var(--white-color);
+      }
+    </style>
   </main>
-
-  <!-- Footer -->
-  @@include('./html/_footer.html')
-
 </body>
 
 <script src="./js/swiper-bundle.min.js"></script>
