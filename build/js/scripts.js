@@ -122,3 +122,59 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 // ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
 tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active')
+
+function container() {
+  const container = document.querySelector('.header');
+  const btn = document.querySelector('.menu__services-close')
+  // const body = document.querySelector('body')
+
+  if (!container) {
+    return null
+  }
+
+
+
+  var timeoutId; // переменная для хранения идентификатора таймера
+
+  // Функция для удаления класса "active" с задержкой
+  function removeActiveClassWithDelay() {
+    timeoutId = setTimeout(function () {
+      container.classList.remove('show');
+      // body.classList.remove('locked');
+    }, 500); // задержка в 0,5 секунды
+  }
+
+  // Добавление обработчика события при наведении на "services" и его дочерние элементы
+  container.addEventListener('mouseover', function () {
+    clearTimeout(timeoutId); // очистка таймера при наведении на элемент
+    container.classList.add('show');
+    // body.classList.add('locked');
+  });
+
+  // Добавление обработчика события при уходе курсора с "services"
+  container.addEventListener('mouseout', removeActiveClassWithDelay);
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      container.classList.remove('show');
+    })
+  }
+
+
+}
+
+if (window.matchMedia("(min-width: 991px)").matches) {
+  container()
+}
+
+function stepsAnimation() {
+  const container = document.querySelector('.steps')
+
+  if (!container) {
+    return null
+  }
+
+  AOS.init();
+}
+stepsAnimation()
+

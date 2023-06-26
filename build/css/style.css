@@ -224,6 +224,10 @@ body.locked {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 102;
   background-color: var(--grey-color-2);
 }
 
@@ -1334,6 +1338,175 @@ body.locked {
   margin: 0 auto;
 }
 
+.steps {
+  padding: 120px 0 0;
+  background-color: var(--main-color);
+}
+
+.steps__header {
+  max-width: 760px;
+  margin: 0 auto 120px;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.steps__title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: 110%;
+}
+
+.steps__descr {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.steps__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--white-color);
+}
+
+.steps__column {
+  display: grid;
+  grid-template-columns: 100px 4px 360px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-column-gap: 100px;
+     -moz-column-gap: 100px;
+          column-gap: 100px;
+  margin-bottom: 100px;
+}
+
+.steps__count {
+  color: #E4DAD3;
+  text-align: right;
+}
+
+.steps__count.aos-animate {
+  position: sticky;
+  top: 100px;
+  left: 0;
+}
+
+.steps__count.aos-animate .steps__count-sum {
+  color: #F4AD7F;
+  opacity: 1;
+}
+
+.steps__count.aos-animate .steps__count-descr {
+  opacity: 1;
+}
+
+.steps__count.aos-animate ~ .steps__line .steps__line-inner {
+  position: sticky;
+  top: 100px;
+  left: 0;
+}
+
+.steps__count-sum {
+  line-height: 110%;
+  font-size: 96px;
+  font-weight: 300;
+  letter-spacing: -4.8px;
+  opacity: 0.1;
+}
+
+.steps__count-descr {
+  line-height: 110%;
+  font-weight: 700;
+  font-size: 16px;
+  color: #CBBBAF;
+  opacity: 0.1;
+}
+
+.steps__line {
+  position: relative;
+  width: 2px;
+  height: 100%;
+  background: rgba(226, 215, 207, 0.3);
+}
+
+.steps__line-inner {
+  width: 4px;
+  margin-left: -1px;
+  height: 72px;
+  background-color: #F4AD7F;
+  border-radius: 12px;
+}
+
+.steps__info {
+  max-width: 360px;
+}
+
+.steps__info-title {
+  margin-bottom: 35px;
+  line-height: 100%;
+  font-size: 36px;
+}
+
+.steps__info-descr {
+  margin-bottom: 32px;
+  font-weight: 300;
+  line-height: 160%;
+  font-size: 18px;
+}
+
+.steps__info-block {
+  margin-bottom: 68px;
+}
+
+.steps__info-label {
+  margin-bottom: 5px;
+  padding: 0 5px;
+  color: #AEA29A;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.steps__info-list {
+  padding: 32px;
+  border-radius: 12px;
+  border: 2px solid rgba(226, 215, 207, 0.2);
+}
+
+.steps__info-item {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 200%;
+}
+
+.steps__time-img {
+  margin-bottom: 10px;
+}
+
+.steps__time-days {
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.steps__time-lines {
+  margin-bottom: 30px;
+}
+
+.steps__time-label {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+}
+
 .footer {
   padding: 120px 0 24px;
   background: #3F3F46;
@@ -1770,6 +1943,10 @@ body.locked {
             flex: 0 1 auto;
   }
 
+  .steps {
+    padding: 60px 0 0;
+  }
+
   .footer {
     padding: 60px 0 24px;
   }
@@ -2107,6 +2284,79 @@ body.locked {
   .map__info-title {
     font-size: 24px;
     line-height: 140%;
+  }
+
+  .steps__header {
+    margin-bottom: 60px;
+  }
+
+  .steps__title {
+    font-size: 24px;
+  }
+
+  .steps__descr {
+    font-size: 18px;
+  }
+
+  .steps__column {
+    grid-template-columns: 30px 4px 250px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .steps__count-sum {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+
+  .steps__count-descr {
+    display: none;
+  }
+
+  .steps__line-inner {
+    height: 30px;
+    margin-left: 0;
+  }
+
+  .steps__info {
+    max-width: 250px;
+  }
+
+  .steps__info-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .steps__info-descr {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .steps__info-block {
+    margin-bottom: 40px;
+  }
+
+  .steps__info-list {
+    padding: 10px;
+    padding-left: 20px;
+  }
+
+  .steps__info-item {
+    font-size: 12px;
+  }
+
+  .steps__time-days {
+    font-size: 14px;
+  }
+
+  .steps__time-lines {
+    margin-bottom: 20px;
+  }
+
+  .steps__time-label {
+    font-size: 18px;
   }
 }
 

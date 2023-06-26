@@ -1,6 +1,10 @@
 // Header
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 102;
   background-color: var(--grey-color-2);
 }
 
