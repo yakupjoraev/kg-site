@@ -55,6 +55,7 @@
 
   // .menu__item-link
   &__item-link {
+    position: relative;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -63,9 +64,26 @@
     opacity: 0.5;
     transition: opacity 0.2s linear;
 
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      left: -10%;
+      width: 120%;
+      height: 4px;
+      background-color: var(--second-color);
+      opacity: 0;
+
+      transition: opacity 0.2s linear;
+    }
+
     @media (min-width: 992px) {
       &:hover {
         opacity: 1;
+
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }

@@ -124,47 +124,88 @@ tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active')
 
 function container() {
   const container = document.querySelector('.header');
-  const btn = document.querySelector('.menu__services-close')
-  // const body = document.querySelector('body')
+  const services = document.querySelector('.services-item')
+  let menuItems = document.querySelectorAll('.menu__item');
+  const btn = document.querySelector('.menu__services-close');
+  const sublists = document.querySelector('.sublists');
+  let timeoutId; // переменная для хранения идентификатора таймера
 
   if (!container) {
-    return null
+    return null;
   }
 
+  // menuItems.forEach(menuItem => {
+  //   menuItem.addEventListener('mouseover', function () {
+  //     clearTimeout(timeoutId); // очистка таймера при наведении на элемент
+  //     container.classList.add('show');
+  //   });
 
+  //   menuItem.addEventListener('mouseout', function () {
+  //     removeActiveClassWithDelay();
+  //   });
+  // });
 
-  var timeoutId; // переменная для хранения идентификатора таймера
+  services.addEventListener('mouseover', function () {
+    clearTimeout(timeoutId); // очистка таймера при наведении на элемент
+    container.classList.add('show');
+  });
 
-  // Функция для удаления класса "active" с задержкой
+  services.addEventListener('mouseout', function () {
+    removeActiveClassWithDelay();
+  });
+
+  if (sublists) {
+    sublists.addEventListener('mouseover', function () {
+      clearTimeout(timeoutId); // очистка таймера при наведении на sublists
+    });
+
+    sublists.addEventListener('mouseout', function (event) {
+      const toElement = event.toElement || event.relatedTarget; // получение элемента, на который курсор перемещается
+
+      // Проверка, находится ли курсор на menuItem или sublists и их дочерних элементах
+      const isCursorOverMenuItem = Array.from(menuItems).some(menuItem =>
+        menuItem.contains(toElement)
+      );
+      const isCursorOverSublists = sublists.contains(toElement);
+
+      if (isCursorOverMenuItem || isCursorOverSublists) {
+        return; // Если курсор все еще на menuItem или sublists, выход из функции
+      }
+
+      container.classList.remove('show');
+    });
+
+    sublists.addEventListener('click', function (event) {
+      container.classList.remove('show');
+      event.stopPropagation(); // предотвращение всплытия события click к родительским элементам
+    });
+
+    const sublistsItems = sublists.querySelectorAll('.sublist__item');
+    sublistsItems.forEach(item => {
+      item.addEventListener('click', function (event) {
+        container.classList.remove('show');
+        event.stopPropagation(); // предотвращение всплытия события click к родительским элементам
+      });
+    });
+  }
+
   function removeActiveClassWithDelay() {
     timeoutId = setTimeout(function () {
       container.classList.remove('show');
-      // body.classList.remove('locked');
     }, 500); // задержка в 0,5 секунды
   }
-
-  // Добавление обработчика события при наведении на "services" и его дочерние элементы
-  container.addEventListener('mouseover', function () {
-    clearTimeout(timeoutId); // очистка таймера при наведении на элемент
-    container.classList.add('show');
-    // body.classList.add('locked');
-  });
-
-  // Добавление обработчика события при уходе курсора с "services"
-  container.addEventListener('mouseout', removeActiveClassWithDelay);
 
   if (btn) {
     btn.addEventListener('click', () => {
       container.classList.remove('show');
-    })
+    });
   }
-
-
 }
 
-if (window.matchMedia("(min-width: 991px)").matches) {
-  container()
+if (window.matchMedia("(min-width: 1200px)").matches) {
+  container();
 }
+
 
 function stepsAnimation() {
   const container = document.querySelector('.steps')
