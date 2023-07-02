@@ -124,87 +124,34 @@ tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active')
 
 function container() {
   const container = document.querySelector('.header');
-  const services = document.querySelector('.services-item')
-  let menuItems = document.querySelectorAll('.menu__item');
-  const btn = document.querySelector('.menu__services-close');
+  const services = document.querySelector('.services-item');
   const sublists = document.querySelector('.sublists');
-  let timeoutId; // переменная для хранения идентификатора таймера
 
   if (!container) {
     return null;
   }
 
-  // menuItems.forEach(menuItem => {
-  //   menuItem.addEventListener('mouseover', function () {
-  //     clearTimeout(timeoutId); // очистка таймера при наведении на элемент
-  //     container.classList.add('show');
-  //   });
-
-  //   menuItem.addEventListener('mouseout', function () {
-  //     removeActiveClassWithDelay();
-  //   });
-  // });
-
-  services.addEventListener('mouseover', function () {
-    clearTimeout(timeoutId); // очистка таймера при наведении на элемент
-    container.classList.add('show');
+  services.addEventListener('click', (event) => {
+    event.preventDefault(); // Отмена стандартного перехода по ссылке
+    container.classList.toggle('show');
   });
 
-  services.addEventListener('mouseout', function () {
-    removeActiveClassWithDelay();
+  // Добавить обработчик события клика на весь документ
+  document.addEventListener('click', (event) => {
+    // Проверить, является ли целевой элемент клика частью контейнера или его дочерним элементом
+    if (!container.contains(event.target)) {
+      container.classList.remove('show'); // Удалить класс "show" у контейнера
+      // Удалить класс "show" у дочерних элементов контейнера (если необходимо)
+      // Например, если sublists является дочерним элементом контейнера, то:
+      // sublists.classList.remove('show');
+    }
   });
-
-  if (sublists) {
-    sublists.addEventListener('mouseover', function () {
-      clearTimeout(timeoutId); // очистка таймера при наведении на sublists
-    });
-
-    sublists.addEventListener('mouseout', function (event) {
-      const toElement = event.toElement || event.relatedTarget; // получение элемента, на который курсор перемещается
-
-      // Проверка, находится ли курсор на menuItem или sublists и их дочерних элементах
-      const isCursorOverMenuItem = Array.from(menuItems).some(menuItem =>
-        menuItem.contains(toElement)
-      );
-      const isCursorOverSublists = sublists.contains(toElement);
-
-      if (isCursorOverMenuItem || isCursorOverSublists) {
-        return; // Если курсор все еще на menuItem или sublists, выход из функции
-      }
-
-      container.classList.remove('show');
-    });
-
-    sublists.addEventListener('click', function (event) {
-      container.classList.remove('show');
-      event.stopPropagation(); // предотвращение всплытия события click к родительским элементам
-    });
-
-    const sublistsItems = sublists.querySelectorAll('.sublist__item');
-    sublistsItems.forEach(item => {
-      item.addEventListener('click', function (event) {
-        container.classList.remove('show');
-        event.stopPropagation(); // предотвращение всплытия события click к родительским элементам
-      });
-    });
-  }
-
-  function removeActiveClassWithDelay() {
-    timeoutId = setTimeout(function () {
-      container.classList.remove('show');
-    }, 500); // задержка в 0,5 секунды
-  }
-
-  if (btn) {
-    btn.addEventListener('click', () => {
-      container.classList.remove('show');
-    });
-  }
 }
 
 if (window.matchMedia("(min-width: 1200px)").matches) {
   container();
 }
+
 
 
 function stepsAnimation() {
@@ -216,4 +163,50 @@ function stepsAnimation() {
 
   AOS.init();
 }
-stepsAnimation()
+stepsAnimation();
+
+// Аккордеон
+const accordionItems = document.querySelectorAll('[data-accordion-item]');
+let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон
+
+function toggleAccordion() {
+  if (openAccordion && openAccordion !== this) {
+    // Если есть открытый аккордеон, который не совпадает с текущим
+    openAccordion.classList.remove('active'); // закрыть его
+    const openAccordionContent = openAccordion.nextElementSibling;
+    if (openAccordionContent) {
+      // если у аккордеона есть содержимое
+      openAccordionContent.style.maxHeight = null; // сбросить высоту контента
+    }
+  }
+
+  this.classList.toggle('active'); // открыть или закрыть текущий аккордеон
+
+  const content = this.nextElementSibling;
+  if (content) {
+    // если у аккордеона есть содержимое
+    if (content.style.maxHeight) {
+      // Если контент открыт, закрыть его
+      content.style.maxHeight = null;
+    } else {
+      // Если контент закрыт, открыть его
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  }
+
+  openAccordion = this; // запомнить ссылку на открытый аккордеон
+}
+
+// Активация первого [data-accordion-item] по умолчанию
+const firstAccordionItem = accordionItems[0]; // Получение первого элемента аккордеона
+if (firstAccordionItem) {
+  firstAccordionItem.classList.add('active'); // Добавление класса "active" для активации элемента
+  const content = firstAccordionItem.nextElementSibling; // Получение содержимого элемента
+  if (content) {
+    content.style.maxHeight = content.scrollHeight + 'px'; // Открытие содержимого
+  }
+  openAccordion = firstAccordionItem; // Обновление ссылки на открытый аккордеон
+}
+
+accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
+
