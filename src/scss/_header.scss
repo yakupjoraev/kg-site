@@ -69,12 +69,12 @@
       position: absolute;
       bottom: -24px;
       left: -10%;
-      width: 120%;
+      width: 0;
       height: 4px;
       background-color: var(--second-color);
-      opacity: 0;
 
-      transition: opacity 0.2s linear;
+
+      transition: width 0.2s linear;
     }
 
     @media (min-width: 992px) {
@@ -82,7 +82,7 @@
         opacity: 1;
 
         &::before {
-          opacity: 1;
+          width: 120%;
         }
       }
     }
@@ -292,4 +292,8 @@
   .menu__item-link {
     color: white;
   }
+}
+
+.header.show .services-item .menu__item-link::before {
+  width: 120%;
 }

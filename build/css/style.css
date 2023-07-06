@@ -324,13 +324,12 @@ body.locked {
   position: absolute;
   bottom: -24px;
   left: -10%;
-  width: 120%;
+  width: 0;
   height: 4px;
   background-color: var(--second-color);
-  opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
-  -o-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+  -webkit-transition: width 0.2s linear;
+  -o-transition: width 0.2s linear;
+  transition: width 0.2s linear;
 }
 
 .menu__item--mobile {
@@ -377,6 +376,10 @@ body.locked {
 .burger {
   display: none;
   cursor: pointer;
+}
+
+.header.show .services-item .menu__item-link::before {
+  width: 120%;
 }
 
 .hero {
@@ -1715,6 +1718,14 @@ body.locked {
   pointer-events: visible;
 }
 
+.header.show .sublist {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  border-top: 1px solid #EAE9E9;
+}
+
 .sublists {
   position: absolute;
   top: 60px;
@@ -1724,23 +1735,22 @@ body.locked {
   display: grid;
   grid-auto-flow: column;
   padding-bottom: 0;
-  border-top: 1px solid #EAE9E9;
+  border-top: 1px solid transparent;
   max-height: 0;
-  opacity: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   pointer-events: none;
-  -webkit-transition: max-height 1.5s linear 0s, padding-bottom 0.3s linear, opacity 0.5s linear;
-  -o-transition: max-height 1.5s linear 0s, padding-bottom 0.3s linear, opacity 0.5s linear;
-  transition: max-height 1.5s linear 0s, padding-bottom 0.3s linear, opacity 0.5s linear;
+  -webkit-transition: max-height 1s linear, padding-bottom 0.6s linear 0.2s;
+  -o-transition: max-height 1s linear, padding-bottom 0.6s linear 0.2s;
+  transition: max-height 1s linear, padding-bottom 0.6s linear 0.2s;
 }
 
 .sublists::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2px;
   left: -500%;
   width: 1000%;
   height: 100%;
@@ -1754,6 +1764,15 @@ body.locked {
       align-content: space-between;
   padding-right: 50px;
   padding-top: 30px;
+  -webkit-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s linear 0.2s, -webkit-transform 0.6s linear 0.2s;
+  transition: opacity 0.6s linear 0.2s, -webkit-transform 0.6s linear 0.2s;
+  -o-transition: transform 0.6s linear 0.2s, opacity 0.6s linear 0.2s;
+  transition: transform 0.6s linear 0.2s, opacity 0.6s linear 0.2s;
+  transition: transform 0.6s linear 0.2s, opacity 0.6s linear 0.2s, -webkit-transform 0.6s linear 0.2s;
 }
 
 .sublist:not(:first-child) {
@@ -2448,7 +2467,7 @@ body.locked {
   }
 
   .menu__item-link:hover::before {
-    opacity: 1;
+    width: 120%;
   }
 
   .socials__link svg:hover {
