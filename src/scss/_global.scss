@@ -24,6 +24,7 @@
 
 // Body Locked
 body {
+  background-color: var(--grey-color-2);
   font-family: 'PF DinDisplay Pro', sans-serif;
   font-weight: 700;
   line-height: 120%;
@@ -34,6 +35,61 @@ body {
     overflow: hidden;
   }
 }
+
+.breadcumps {
+  margin: 52px 0 22px;
+  background-color: transparent;
+
+  // .breadcumps__inner
+
+  &__inner {}
+
+  // .breadcumps__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  // .breadcumps__item
+
+  &__item {
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: #8F8F92;
+  }
+
+  // .breadcumps__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: #8F8F92;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Animations
 // Fade

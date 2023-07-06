@@ -9,9 +9,9 @@
     justify-content: space-between;
     column-gap: 40px;
 
-    height: 560px;
-    max-height: 560px;
-    min-height: 560px;
+    height: 554px;
+    max-height: 554px;
+    min-height: 554px;
     padding: 32px 32px 32px 50px;
     background-color: var(--white-color);
     border-radius: 6px;
@@ -42,6 +42,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   // .leaders__row
@@ -72,6 +73,8 @@
     }
 
     &.active {
+      flex: 1 1 auto;
+
       .leaders__row-content {
         opacity: 1;
         user-select: auto;

@@ -84,6 +84,19 @@ function casesSlider() {
 
 casesSlider();
 
+function casesPageSlider() {
+  var swiper = new Swiper(".cases-page__slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".cases-page__slider-next",
+      prevEl: ".cases-page__slider-prev",
+    },
+  });
+}
+
+casesPageSlider();
+
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
   const header = document.querySelector(headerSelector),
     tab = document.querySelectorAll(tabSelector),

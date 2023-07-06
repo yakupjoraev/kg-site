@@ -1,0 +1,125 @@
+.best-projects {
+  margin-bottom: 190px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 60px;
+  }
+
+
+  // .best-projects__inner
+
+  &__inner {}
+
+  // .best-projects__title
+
+  &__title {
+    margin-bottom: 52px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .best-projects__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+  }
+
+  // .best-projects__item
+
+  &__item {
+    display: grid;
+    padding: 48px 48px 40px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+
+    @media (max-width: $breakpoint768) {
+      padding: 20px;
+    }
+
+  }
+
+  // .best-projects__header
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2px;
+    row-gap: 2px;
+    max-width: 260px;
+    margin-bottom: 48px;
+
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .best-projects__header-item
+
+  &__header-item {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #E8E8E8;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 8px;
+  }
+
+  // .best-projects__item-title
+
+  &__item-title {
+    margin-bottom: 14px;
+    font-weight: 700;
+    line-height: 112%;
+    font-size: 32px;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 28px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+    }
+  }
+
+  // .best-projects__item-descr
+
+  &__item-descr {
+    align-self: self-end;
+    font-weight: 500;
+    line-height: 144%;
+    font-size: 17px;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 14px;
+    }
+  }
+
+  // .best-projects__item--yellow
+
+  &__item--yellow {
+    background-color: var(--yellow-color-2);
+  }
+}
