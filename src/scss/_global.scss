@@ -36,6 +36,37 @@ body {
   }
 }
 
+.integrated-page {
+  background-color: var(--main-color);
+
+  & .header {
+    background-color: var(--main-color);
+
+    transition: background-color 1s linear;
+  }
+
+  & .menu__item-link {
+    color: var(--white-color);
+  }
+
+  & .header.show {
+    .menu__item-link {
+      color: var(--main-color);
+    }
+
+    .socials__link {
+
+      svg path {
+        fill: var(--main-color);
+      }
+    }
+
+    .logo img {
+      filter: brightness(0.5);
+    }
+  }
+}
+
 .breadcumps {
   margin: 52px 0 22px;
   background-color: transparent;
