@@ -85,6 +85,12 @@ function casesSlider() {
 casesSlider();
 
 function casesPageSlider() {
+  const container = document.querySelector('.cases-page');
+
+  if (!container) {
+    return null
+  }
+
   var swiper = new Swiper(".cases-page__slider", {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -96,6 +102,25 @@ function casesPageSlider() {
 }
 
 casesPageSlider();
+
+function developmentExamplestSlider() {
+  const container = document.querySelector('.development-examples__block-slides');
+
+  if (!container) {
+    return null
+  }
+
+  var swiper = new Swiper(".development-examples__block-slides .cases-page__slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".development-examples__block-slides .cases-page__slider-next",
+      prevEl: ".development-examples__block-slides .cases-page__slider-prev",
+    },
+  });
+}
+
+developmentExamplestSlider();
 
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
   const header = document.querySelector(headerSelector),
