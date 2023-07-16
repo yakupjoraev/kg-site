@@ -303,3 +303,388 @@
     height: 48px;
   }
 }
+
+.settings__integrated-info {
+  margin-bottom: 128px;
+  background-color: #E8E8E8;
+
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 60px;
+  }
+
+  .integrated__text {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 140%;
+    color: var(--main-color);
+  }
+
+  .integrated__text--grey {
+    color: #8F8F92;
+  }
+}
+
+
+.settings {
+
+
+  // .settings__hourglass
+
+  &__hourglass {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 15px;
+
+    margin-bottom: 190px;
+
+    @media (max-width: $breakpoint992) {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 30px;
+      margin-bottom: 60px;
+    }
+  }
+
+  // .settings__hourglass-title
+
+  &__hourglass-title {
+    margin-right: auto;
+
+
+    @media (max-width: $breakpoint992) {
+      grid-column: span 6;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  // .settings__hourglass-list
+
+  &__hourglass-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 50px 40px;
+    border-radius: 12px;
+    border: 1.5px solid #D7D7D7;
+    background: #F3F0F0;
+
+
+    @media (max-width: $breakpoint992) {
+      grid-column: span 4;
+      height: 100%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-column: span 6;
+      padding: 20px;
+    }
+  }
+
+  // .settings__hourglass-litem
+
+  &__hourglass-litem {
+    position: relative;
+    max-width: 450px;
+    padding-left: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--main-color);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: var(--main-color);
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+    }
+  }
+
+  // .settings__hourglass-picture
+
+  &__hourglass-picture {
+    flex: 0 1 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    border-radius: 12px;
+    border: 1px solid #D7D7D7;
+    padding: 50px 50px 0 50px;
+
+
+    @media (max-width: $breakpoint992) {
+      grid-column: span 2;
+      height: 100%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-column: span 6;
+      padding: 20px 20px 0 20px;
+    }
+  }
+
+  // .settings__hourglass-label
+
+  &__hourglass-label {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 120%;
+
+    span {
+      color: var(--yellow-color-2);
+    }
+  }
+
+  // .settings__hourglass-pic
+
+  &__hourglass-pic {}
+}
+
+.settings {
+
+  // .settings__info
+
+  &__info {
+
+    margin-bottom: 190px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 60px;
+    }
+  }
+
+  // .settings__info-list
+
+  &__info-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .settings__info-item
+
+  &__info-item {
+    display: grid;
+    align-content: baseline;
+    padding: 48px;
+    border-radius: 12px;
+    border: 1.5px solid #D7D7D7;
+    background-color: #F3F0F0;
+
+    @media (max-width: $breakpoint992) {
+      padding: 20px;
+    }
+
+  }
+
+  // .settings__info-icon
+
+  &__info-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 28px;
+  }
+
+  // .settings__info-title
+
+  &__info-title {
+    max-width: 120px;
+    margin-bottom: 16px;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 140%;
+  }
+
+  // .settings__info-descr
+
+  &__info-descr {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+.settings {
+
+  // .settings__faq
+
+  &__faq {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 116px;
+
+    @media (max-width: $breakpoint1450) {
+      column-gap: 60px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
+  }
+
+  // .settings__faq-list
+
+  &__faq-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+
+  // .settings__faq-item
+
+  &__faq-item {
+    padding: 40px 24px 40px 48px;
+    border-radius: 6px;
+    background-color: #E8E8E8;
+
+    transition: background-color 0.2s linear;
+
+    @media (max-width: $breakpoint768) {
+      padding: 20px;
+    }
+
+    &.active {
+      background-color: var(--white-color);
+
+      .settings__faq-item-title {
+        margin-bottom: 20px;
+      }
+
+      .settings__faq-descr {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+
+        @media (max-width: $breakpoint768) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // .settings__faq-item-title
+
+  &__faq-item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+    margin-bottom: 0;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 140%;
+    cursor: pointer;
+
+    transition: margin-bottom 0.2s linear;
+
+    svg {
+      min-width: 34px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+    }
+  }
+
+  // .settings__faq-descr
+
+  &__faq-descr {
+    font-size: 0;
+    line-height: 0;
+
+    transition: 0.1s linear;
+  }
+
+  // .settings__faq-info
+
+  &__faq-info {
+    flex: 0 1 382px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+  }
+
+  // .settings__faq-title
+
+  &__faq-title {
+    max-width: 200px;
+    margin-bottom: 34px;
+
+    @media (max-width: $breakpoint992) {
+      max-width: 100%;
+    }
+  }
+
+  // .settings__faq-texts
+
+  &__faq-texts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-bottom: 150px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 60px;
+    }
+  }
+
+  // .settings__faq-text
+
+  &__faq-text {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--main-color);
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+    }
+  }
+
+  // .settings__faq-pic
+
+  &__faq-pic {
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+}
+
+.settings__graphic--yellow {
+  background-color: var(--yellow-color-2);
+  background-image: url('../img/settings/settings-graphic-bg-2.svg');
+
+  .settings__graphic-btn {
+    background-color: var(--white-color);
+
+    &:hover {
+      background-color: var(--yellow-color);
+      color: var(--main-color);
+    }
+  }
+
+  .settings__graphic-label {
+    background-color: var(--white-color);
+  }
+}

@@ -124,42 +124,47 @@ function developmentExamplestSlider() {
 developmentExamplestSlider();
 
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
-  const header = document.querySelector(headerSelector),
-    tab = document.querySelectorAll(tabSelector),
-    content = document.querySelectorAll(contentSelector)
-  function hideTabContent() {
-    content.forEach(item => {
-      item.style.display = 'none'
-    });
-    tab.forEach(item => {
-      item.classList.remove(activeClass)
-    });
-  }
-  function showTabContent(i = 0) {
-    content[i].style.display = display
-    tab[i].classList.add(activeClass)
-  }
-  hideTabContent()
-  showTabContent()
-  header.addEventListener('click', e => {
-    const target = e.target
-    if (target.classList.contains(tabSelector.replace(/\./, '')) ||
-      target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
-      tab.forEach((item, i) => {
-        if (target == item || target.parentNode == item) {
-          hideTabContent()
-          showTabContent(i)
-        }
+  const headers = document.querySelectorAll(headerSelector);
+
+  headers.forEach(header => {
+    const tabs = header.querySelectorAll(tabSelector),
+      contents = header.parentElement.querySelectorAll(contentSelector);
+
+    function hideTabContent() {
+      contents.forEach(item => {
+        item.style.display = 'none';
+      });
+      tabs.forEach(item => {
+        item.classList.remove(activeClass);
       });
     }
-  })
+
+    function showTabContent(i = 0) {
+      contents[i].style.display = display;
+      tabs[i].classList.add(activeClass);
+    }
+
+    hideTabContent();
+    showTabContent();
+
+    header.addEventListener('click', e => {
+      const target = e.target;
+      if (target.classList.contains(tabSelector.replace(/\./, '')) ||
+        target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
+        tabs.forEach((item, i) => {
+          if (target == item || target.parentNode == item) {
+            hideTabContent();
+            showTabContent(i);
+          }
+        });
+      }
+    });
+  });
 }
 
-// ПЕРВЫЙ аргумент - класс всего нашего хедера табов.
-// ВТОРОЙ аргумент - класс конкретного элемента, при клике на который будет переключатся таб.
-// ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
-// ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
-tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active')
+// Usage example:
+tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
+
 
 function container() {
   const container = document.querySelector('.header');
@@ -250,3 +255,27 @@ if (firstAccordionItem) {
 accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 
 
+
+
+
+
+
+
+
+function faqList() {
+  const list = document.querySelector('[data-faq-list]');
+
+  if (!list) {
+    return null
+  }
+
+  let listItems = document.querySelectorAll('[data-faq-item]');
+
+  listItems.forEach(listItem => {
+    listItem.addEventListener('click', () => {
+      listItem.classList.toggle('active')
+    })
+  });
+}
+
+faqList();
