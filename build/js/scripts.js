@@ -39,20 +39,6 @@ function burgerMenu() {
 burgerMenu()
 
 
-// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
-function fixedNav() {
-  const nav = document.querySelector('nav')
-
-  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 1
-  if (window.scrollY >= breakpoint) {
-    nav.classList.add('fixed__nav')
-  } else {
-    nav.classList.remove('fixed__nav')
-  }
-}
-window.addEventListener('scroll', fixedNav)
-
 
 function casesSlider() {
   var swiper = new Swiper(".cases__slider", {
@@ -177,6 +163,7 @@ function container() {
 
   services.addEventListener('click', (event) => {
     event.preventDefault(); // Отмена стандартного перехода по ссылке
+    container.classList.remove('contacts-item');
     container.classList.toggle('show');
   });
 
@@ -196,6 +183,56 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
   container();
 }
 
+
+
+
+function contactsBlock() {
+  const container = document.querySelector('.header');
+  const contacts = document.querySelector('.contacts-item');
+
+  if (!container) {
+    return null;
+  }
+
+  contacts.addEventListener('click', (event) => {
+    event.preventDefault(); // Отмена стандартного перехода по ссылке
+    container.classList.remove('show');
+    container.classList.toggle('contacts-item');
+  });
+
+  // Добавить обработчик события клика на весь документ
+  document.addEventListener('click', (event) => {
+    // Проверить, является ли целевой элемент клика частью контейнера или его дочерним элементом
+    if (!container.contains(event.target)) {
+      container.classList.remove('contacts-item'); // Удалить класс "contacts" у контейнера
+      // Удалить класс "show" у дочерних элементов контейнера (если необходимо)
+      // Например, если contacts является дочерним элементом контейнера, то:
+      // contacts.classList.remove('contacts');
+    }
+  });
+
+  // Добавить обработчик события touchstart для определения начальной точки касания
+  document.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+  });
+
+  // Добавить обработчик события touchmove для определения свайпа
+  document.addEventListener('touchmove', (event) => {
+    event.preventDefault(); // Предотвратить скроллинг при свайпе
+  });
+
+  // Добавить обработчик события touchend для определения окончания свайпа
+  document.addEventListener('touchend', (event) => {
+    const touchEndX = event.changedTouches[0].clientX;
+    const swipeThreshold = 5; // Минимальная дистанция свайпа для активации
+
+    if (touchStartX - touchEndX > swipeThreshold) {
+      // Свайп влево, убрать класс "contacts-item"
+      container.classList.remove('contacts-item');
+    }
+  });
+}
+contactsBlock();
 
 
 function stepsAnimation() {

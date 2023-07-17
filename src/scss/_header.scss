@@ -67,7 +67,7 @@
     &::before {
       content: '';
       position: absolute;
-      bottom: -24px;
+      bottom: -22px;
       left: -10%;
       width: 0;
       height: 4px;
@@ -75,6 +75,10 @@
 
 
       transition: width 0.2s linear;
+
+      @media (max-width: $breakpoint992) {
+        bottom: -12px;
+      }
     }
 
     @media (min-width: 992px) {
@@ -294,6 +298,18 @@
   }
 }
 
+.header.show .services-item .menu__item-link {
+  opacity: 1;
+}
+
 .header.show .services-item .menu__item-link::before {
+  width: 120%;
+}
+
+.header.contacts-item .contacts-item .menu__item-link {
+  opacity: 1;
+}
+
+.header.contacts-item .contacts-item .menu__item-link::before {
   width: 120%;
 }
