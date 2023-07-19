@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 234px;
+  padding: 0 32px;
+  width: fit-content;
   height: 46px;
 
-  background-color: var(--yellow-color);
+  background-color: var(--yellow-color-2);
   border-radius: 6px;
 
   white-space: nowrap;
@@ -13,9 +14,9 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 100%;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.84px;
   text-transform: uppercase;
-  color: var(--btn-color);
+  color: var(--main-color);
 
   transition: background-color 0.2s linear, color 0.2s linear;
 
@@ -40,9 +41,9 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 100%;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.84px;
   text-transform: uppercase;
-  color: var(--btn-color);
+  color: var(--main-color);
 
   transition: background-color 0.2s linear, color 0.2s linear;
 

@@ -1,5 +1,5 @@
 .subscription-experts {
-  padding: 120px 0;
+  padding: 100px 0 72px;
   background-color: var(--main-color);
 
   @media (max-width: $breakpoint992) {
@@ -38,7 +38,7 @@
   // .subscription-experts__descr
 
   &__descr {
-    max-width: 760px;
+    max-width: 784px;
     margin: 0 auto 80px;
     font-weight: 400;
     line-height: 160%;
@@ -62,7 +62,15 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
     row-gap: 40px;
-    margin-bottom: 110px;
+    margin-bottom: 64px;
+    max-height: 200px;
+    overflow: hidden;
+
+    transition: max-height 0.3s linear, overflow 0.3s linear;
+
+    &.show {
+      max-height: 10000px;
+    }
 
     @media (max-width: $breakpoint992) {
       display: grid;
@@ -105,6 +113,7 @@
     align-items: center;
     justify-content: center;
     column-gap: 16px;
+    cursor: pointer;
 
     @media (max-width: $breakpoint768) {
       flex-direction: column;
@@ -115,9 +124,28 @@
   // .subscription-experts__link
 
   &__link {
+    letter-spacing: 1.2px;
+
+    &.secondary-btn {
+      width: fit-content;
+      padding: 0 32px;
+      background-color: transparent;
+      border: 1.5px solid #717278;
+      color: var(--white-color);
+
+      &:hover {
+        border-color: transparent;
+        background-color: var(--second-color);
+        color: var(--white-color);
+      }
+    }
 
     @media (max-width: $breakpoint768) {
       width: 100%;
+
+      &.secondary-btn {
+        width: 100%;
+      }
     }
   }
 }

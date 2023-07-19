@@ -190,7 +190,7 @@ function contactsBlock() {
   const container = document.querySelector('.header');
   const contacts = document.querySelector('.contacts-item');
 
-  if (!container) {
+  if (!container || !contacts) {
     return null;
   }
 
@@ -200,20 +200,12 @@ function contactsBlock() {
     container.classList.toggle('contacts-item');
   });
 
-  // Добавить обработчик события клика на весь документ
-  document.addEventListener('click', (event) => {
-    // Проверить, является ли целевой элемент клика частью контейнера или его дочерним элементом
-    if (!container.contains(event.target)) {
-      container.classList.remove('contacts-item'); // Удалить класс "contacts" у контейнера
-      // Удалить класс "show" у дочерних элементов контейнера (если необходимо)
-      // Например, если contacts является дочерним элементом контейнера, то:
-      // contacts.classList.remove('contacts');
-    }
-  });
+  let touchStartY; // Переменная для хранения начальной точки касания по Y
+  const swipeThreshold = 50; // Минимальная дистанция свайпа для активации
 
   // Добавить обработчик события touchstart для определения начальной точки касания
   document.addEventListener('touchstart', (event) => {
-    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
   });
 
   // Добавить обработчик события touchmove для определения свайпа
@@ -223,16 +215,30 @@ function contactsBlock() {
 
   // Добавить обработчик события touchend для определения окончания свайпа
   document.addEventListener('touchend', (event) => {
-    const touchEndX = event.changedTouches[0].clientX;
-    const swipeThreshold = 5; // Минимальная дистанция свайпа для активации
+    if (!touchStartY) return; // Убедимся, что touchstart был вызван до этого
 
-    if (touchStartX - touchEndX > swipeThreshold) {
-      // Свайп влево, убрать класс "contacts-item"
-      container.classList.remove('contacts-item');
+    const touchEndY = event.changedTouches[0].clientY;
+
+    // Вычисляем вертикальное расстояние свайпа
+    const deltaY = touchEndY - touchStartY;
+
+    if (Math.abs(deltaY) > swipeThreshold) {
+      if (deltaY > 0) {
+        // Свайп вниз, убрать класс "contacts-item"
+        container.classList.remove('contacts-item');
+      } else {
+        // Свайп вверх, убрать класс "contacts-item"
+        container.classList.remove('contacts-item');
+      }
     }
+
+    // Сбросим touchStartY, чтобы не повлиять на следующий свайп
+    touchStartY = null;
   });
 }
+
 contactsBlock();
+
 
 
 function stepsAnimation() {
@@ -316,3 +322,20 @@ function faqList() {
 }
 
 faqList();
+
+
+function videosAll() {
+  const videosContainer = document.querySelector('[data-youtube-videos]');
+
+  if (!videosContainer) {
+    return null
+  }
+
+  const videosBtnAll = document.querySelector('[data-youtube-videos-btn]')
+
+  videosBtnAll.addEventListener('click', () => {
+    videosContainer.classList.toggle('show')
+  })
+}
+
+videosAll();

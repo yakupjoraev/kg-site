@@ -12,9 +12,9 @@
     height: 554px;
     max-height: 554px;
     min-height: 554px;
-    padding: 32px 32px 32px 50px;
+    padding: 45px 32px 37px 48px;
     background-color: var(--white-color);
-    border-radius: 6px;
+    border-radius: 12px;
 
 
     @media (max-width: 1200px) {
@@ -97,14 +97,14 @@
         transform: rotate(90deg);
       }
 
-      svg path:nth-child(2) {
-        fill: #fff;
-      }
+      // svg path:nth-child(2) {
+      //   fill: #fff;
+      // }
 
-      svg {
-        background-color: #F4AD7F;
-        border-radius: 8px;
-      }
+      // svg {
+      //   background-color: #F4AD7F;
+      //   border-radius: 8px;
+      // }
     }
   }
 
@@ -185,7 +185,7 @@
     max-width: 610px;
     display: flex;
     align-items: center;
-    column-gap: 32px;
+    column-gap: 16px;
 
     iframe {
       border-radius: 12px;

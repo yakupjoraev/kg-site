@@ -1,5 +1,5 @@
 .map {
-  padding: 120px 0 60px;
+  padding: 100px 0 120px;
   background-color: var(--main-color);
 
   @media (max-width: $breakpoint992) {
@@ -13,7 +13,7 @@
   // .map__top
 
   &__top {
-    margin-bottom: 76px;
+    // margin-bottom: 76px;
   }
 
   // .map__title
@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 160px;
+    padding-top: 120px;
 
 
     @media (max-width: $breakpoint992) {
@@ -100,24 +100,25 @@
     width: 120px;
     height: 44px;
     margin: 0 auto 30px;
-    background-color: var(--second-color);
+    background-color: #FFA469;
     border-radius: 12px;
     font-weight: 700;
     text-align: center;
     font-size: 12px;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.84px;
+    line-height: normal;
     text-transform: uppercase;
     color: var(--white-color);
 
     &::before {
       content: '';
       position: absolute;
-      bottom: -12px;
+      bottom: -6px;
       left: 50%;
       transform: translateX(-50%) rotate(-45deg);
-      width: 24px;
-      height: 24px;
-      background-color: var(--second-color);
+      width: 12px;
+      height: 12px;
+      background-color: #FFA469;
       border-radius: 0px 0px 0px 4px;
     }
   }
@@ -129,7 +130,8 @@
     font-weight: 500;
     line-height: 100%;
     text-align: center;
-    font-size: 48px;
+    font-size: 36px;
+    line-height: normal;
     color: var(--white-color);
 
     @media (max-width: $breakpoint768) {
@@ -142,5 +144,6 @@
 
   &__info-link {
     margin: 0 auto;
+    padding: 0 25px;
   }
 }

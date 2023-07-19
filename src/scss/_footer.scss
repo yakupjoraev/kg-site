@@ -1,5 +1,5 @@
 .footer {
-  padding: 120px 0 24px;
+  padding: 160px 0 24px;
   background: #3F3F46;
 
 
@@ -14,7 +14,7 @@
   // .footer__top
 
   &__top {
-    padding-bottom: 90px;
+    padding-bottom: 80px;
   }
 
   // .footer__lists
@@ -24,7 +24,7 @@
     align-items: flex-start;
     justify-content: space-between;
     column-gap: 40px;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 
     @media (max-width: $breakpoint992) {
       flex-direction: column;
@@ -67,8 +67,8 @@
 
   &__item-mail {
     color: #B2B2B5;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 160%;
   }
 
@@ -84,8 +84,8 @@
 
   &__item-name {
     color: #B2B2B5;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 160%;
   }
 
@@ -107,7 +107,9 @@
 
   // .footer__socials
 
-  &__socials {}
+  &__socials {
+    margin-top: 30px;
+  }
 
   // .footer__socials-title
 
@@ -164,6 +166,7 @@
   // .footer__bottom-text
 
   &__bottom-text {
+    font-weight: 400;
     color: #B2B2B5;
     font-size: 13px;
     line-height: 160%;
@@ -173,6 +176,7 @@
 
   &__bottom-link {
     color: #B2B2B5;
+    font-weight: 400;
     font-size: 13px;
     line-height: 160%;
   }
