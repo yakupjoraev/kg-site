@@ -33,7 +33,7 @@
   user-select: none;
   pointer-events: none;
 
-  transition: max-height 1s linear, padding-bottom 0.6s linear 0.2s;
+  transition: max-height 0.7s linear, padding-bottom 0.6s linear 0.2s;
 
   &::before {
     content: '';

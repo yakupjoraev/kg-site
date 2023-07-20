@@ -1388,7 +1388,6 @@ body.locked {
 
 .tabs {
   width: 100%;
-  margin-bottom: 36px;
 }
 
 .tabs__header {
@@ -1515,6 +1514,17 @@ body.locked {
   line-height: 160%;
   color: var(--white-color);
   opacity: 0.7;
+}
+
+.tabs__content-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 36px;
 }
 
 .map {
@@ -1834,9 +1844,9 @@ body.locked {
       -ms-user-select: none;
           user-select: none;
   pointer-events: none;
-  -webkit-transition: max-height 1s linear, padding-bottom 0.6s linear 0.2s;
-  -o-transition: max-height 1s linear, padding-bottom 0.6s linear 0.2s;
-  transition: max-height 1s linear, padding-bottom 0.6s linear 0.2s;
+  -webkit-transition: max-height 0.7s linear, padding-bottom 0.6s linear 0.2s;
+  -o-transition: max-height 0.7s linear, padding-bottom 0.6s linear 0.2s;
+  transition: max-height 0.7s linear, padding-bottom 0.6s linear 0.2s;
 }
 
 .sublists::before {
@@ -4729,10 +4739,6 @@ body.locked {
 
   .cases__slide-footer {
     padding: 0 20px 0;
-  }
-
-  .tabs {
-    margin-bottom: 40px;
   }
 
   .tabs__header {
