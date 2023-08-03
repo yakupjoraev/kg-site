@@ -63,14 +63,9 @@
     column-gap: 40px;
     row-gap: 40px;
     margin-bottom: 64px;
-    max-height: 200px;
     overflow: hidden;
 
     transition: max-height 0.3s linear, overflow 0.3s linear;
-
-    &.show {
-      max-height: 10000px;
-    }
 
     @media (max-width: $breakpoint992) {
       display: grid;
