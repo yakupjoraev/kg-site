@@ -688,3 +688,24 @@
     background-color: var(--white-color);
   }
 }
+
+.settings__info-audit-title {
+  margin-bottom: 64px;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 36px;
+
+  span {
+    display: block;
+    color: #B9BABD;
+  }
+
+  @media (max-width: $breakpoint992) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 24px;
+  }
+}

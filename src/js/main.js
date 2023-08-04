@@ -338,3 +338,51 @@ function videosAll() {
 }
 
 videosAll();
+
+
+function auditSticky() {
+  const container = document.querySelector('.audit__steps');
+
+  if (!container) {
+    return null
+  }
+
+  // Получаем элементы списка шагов
+  const stepsItems = document.querySelectorAll('.audit__steps-item');
+
+  // Получаем элемент aside
+  const aside = document.querySelector('.audit__steps-aside');
+
+  // Функция, которая будет вызываться при скролле
+  function handleScroll() {
+    // Получаем верхний отступ aside
+    const asideTop = aside.getBoundingClientRect().top;
+
+    // Находим текущий активный шаг
+    let activeStep = null;
+    stepsItems.forEach((item, index) => {
+      const itemTop = item.getBoundingClientRect().top;
+      if (itemTop <= asideTop) {
+        activeStep = item;
+      }
+    });
+
+    // Удаляем класс active у всех элементов списка
+    stepsItems.forEach((item) => item.classList.remove('active'));
+
+    // Добавляем класс active текущему активному шагу
+    if (activeStep) {
+      activeStep.classList.add('active');
+    }
+  }
+
+  // Добавляем обработчик события скролла
+  window.addEventListener('scroll', handleScroll);
+
+  // Запускаем функцию при загрузке страницы, чтобы применить начальное состояние
+  handleScroll();
+
+}
+
+auditSticky();
+

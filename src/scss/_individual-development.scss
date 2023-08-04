@@ -364,6 +364,10 @@
       font-size: 22px;
     }
 
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+    }
+
   }
 
   // .experience-teams__item-descr
@@ -377,6 +381,9 @@
       font-size: 16px;
     }
 
+    @media (max-width: $breakpoint768) {
+      font-size: 15px;
+    }
   }
 
   // .experience-teams__item--white
@@ -384,6 +391,12 @@
   &__item--white {
     border-color: #D7D7D7;
     background-color: var(--white-color);
+    color: var(--main-color);
+  }
+
+  &__item--grey {
+    border-color: #D7D7D7;
+    background-color: #F3F0F0;
     color: var(--main-color);
   }
 
@@ -397,7 +410,9 @@
 }
 
 
-
+.experience-teams__item--audit {
+  padding: 48px 48px 96px 48px;
+}
 
 
 .how-dev {
