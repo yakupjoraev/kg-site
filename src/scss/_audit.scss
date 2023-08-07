@@ -1,7 +1,6 @@
 .audit {
   padding-top: 90px;
 
-
   @media (max-width: $breakpoint992) {
     padding-top: 60px;
   }
@@ -126,10 +125,9 @@
     }
 
     @media (max-width: $breakpoint768) {
+      position: static;
       flex: 0 1 auto;
       row-gap: 20px;
-
-      position: static;
     }
   }
 

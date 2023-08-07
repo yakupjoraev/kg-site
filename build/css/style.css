@@ -7080,11 +7080,11 @@ body.locked {
   }
 
   .audit__steps-aside {
+    position: static;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
     row-gap: 20px;
-    position: static;
   }
 
   .audit__steps-list {
