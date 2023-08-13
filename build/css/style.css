@@ -5042,6 +5042,7 @@ body.locked {
 }
 
 .tariffs__prices-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   -webkit-column-gap: 16px;
@@ -5543,9 +5544,6 @@ body.locked {
   -webkit-column-gap: 12px;
      -moz-column-gap: 12px;
           column-gap: 12px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   padding: 0 10px;
   margin: 0 -10px;
   font-weight: 400;
@@ -5557,9 +5555,14 @@ body.locked {
   cursor: pointer;
 }
 
-.tariffs__prices-advantage:hover {
-  background-color: var(--yellow-color-2);
-  border-radius: 12px;
+.tariffs__prices-advantage:hover::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 34px;
+  border-radius: 6px;
+  border: 2px solid #FFA469;
 }
 
 .tariffs__prices-item--black .tariffs__prices-advantage:hover {
