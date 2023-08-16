@@ -1,8 +1,10 @@
 .tariffs {
   margin-bottom: 180px;
+  padding-top: 90px;
 
   @media (max-width: $breakpoint992) {
     margin-bottom: 90px;
+    padding-top: 60px;
   }
 
   @media (max-width: $breakpoint768) {
@@ -656,7 +658,7 @@
   .tariffs__prices-item-title {
     height: auto;
     border: 0;
-    margin: 10px;
+    margin-bottom: 12px;
     padding: 0;
   }
 }
@@ -748,4 +750,13 @@
   @media (max-width: $breakpoint768) {
     display: none;
   }
+
+}
+
+.tariffs__prices-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+  margin-bottom: 24px;
 }
