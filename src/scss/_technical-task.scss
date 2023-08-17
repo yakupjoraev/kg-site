@@ -460,3 +460,29 @@
     }
   }
 }
+
+.technical-task__improvement-item--transparent {
+  background-color: transparent;
+  border: 1px solid #D7D7D7;
+
+  .technical-task__improvement-label {
+    color: var(--main-color);
+  }
+
+  .technical-task__improvement-text {
+    color: var(--main-color);
+  }
+
+  .technical-task__improvement-num {
+    // text-shadow: none;
+    color: #F3F0F0;
+
+
+    text-shadow:
+      -1px 0px 0px #D7D7D7,
+      1px 0px 0px #D7D7D7,
+      0px -1px 0px #D7D7D7,
+      0px 1px 0px #D7D7D7;
+
+  }
+}
