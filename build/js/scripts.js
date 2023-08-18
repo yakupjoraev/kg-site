@@ -109,6 +109,27 @@ function developmentExamplestSlider() {
 
 developmentExamplestSlider();
 
+
+// /** * custom
+//  * @returns {null} */
+// function developmentExamplestSlider() {
+//   const container = document.querySelectorAll('.development-examples__block-slides');
+//   if (!container) {
+//     return null
+//   }
+//   container.forEach((elem) => {
+//     var id = elem.dataset.id
+//     new Swiper(".development-examples__block-slides .cases-page__slider-" + id, {
+//       slidesPerView: 1, spaceBetween: 20,
+//       navigation: {
+//         nextEl: ".development-examples__block-slides .cases-page__slider-next-" + id,
+//         prevEl: ".development-examples__block-slides .cases-page__slider-prev-" + id,
+//       },
+//     });
+//   })
+// }
+// developmentExamplestSlider();
+
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
   const headers = document.querySelectorAll(headerSelector);
 
