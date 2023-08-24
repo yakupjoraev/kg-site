@@ -1,0 +1,132 @@
+.vacancy {
+
+  .vacancies__infos {
+    margin-bottom: 0;
+  }
+
+  // .vacancy__tablo
+
+  &__tablo {
+    display: flex;
+    flex-direction: column;
+    padding: 64px;
+    margin: 0 0 30px 0;
+    border-radius: 12px;
+    background-color: var(--white-color);
+
+    @media (max-width: $breakpoint992) {
+      padding: 24px;
+    }
+  }
+
+  // .vacancy__title
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 24px;
+    }
+  }
+
+  // .vacancy__subtitle
+
+  &__subtitle {
+    margin-bottom: 48px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #8F8F92;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+  }
+
+  .vacancies__vacancies-experience {
+    margin-bottom: 48px;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .vacancy__tablo-btn
+
+  &__tablo-btn {}
+}
+
+
+.vacancy__director-footer {
+  margin: 64px 0;
+  padding: 24px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+
+  .vacancies__director-quote {
+    padding: 0 66px;
+    text-align: left;
+
+    @media (max-width: $breakpoint768) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.vacancy {
+
+  // .vacancy__director
+
+  &__director {
+    margin-bottom: 64px;
+    padding-top: 40px;
+    border-radius: 12px;
+    background-color: var(--white-color);
+    background-image: url('../img/vacancies/vacancy-bg.svg');
+    background-repeat: no-repeat;
+  }
+
+  // .vacancy__director-top
+
+  &__director-top {
+    margin: 0 auto 3px;
+    text-align: center;
+
+    img {
+      margin-bottom: 16px;
+    }
+  }
+
+  // .vacancy__director-bottom
+
+  &__director-bottom {
+
+    .vacancy__director-footer {
+      margin: 0;
+    }
+
+    .vacancies__director-quote {
+      font-weight: 400;
+      text-align: center;
+
+      @media (max-width: $breakpoint768) {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  // .vacancy__director-footer
+
+  &__director-footer {}
+}

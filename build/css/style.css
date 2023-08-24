@@ -6855,6 +6855,81 @@ body.locked {
   line-height: 140%;
 }
 
+.vacancy .vacancies__infos {
+  margin-bottom: 0;
+}
+
+.vacancy__tablo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 64px;
+  margin: 0 0 30px 0;
+  border-radius: 12px;
+  background-color: var(--white-color);
+}
+
+.vacancy__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.vacancy__subtitle {
+  margin-bottom: 48px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #8F8F92;
+}
+
+.vacancy .vacancies__vacancies-experience {
+  margin-bottom: 48px;
+}
+
+.vacancy__director-footer {
+  margin: 64px 0;
+  padding: 24px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+}
+
+.vacancy__director-footer .vacancies__director-quote {
+  padding: 0 66px;
+  text-align: left;
+}
+
+.vacancy__director {
+  margin-bottom: 64px;
+  padding-top: 40px;
+  border-radius: 12px;
+  background-color: var(--white-color);
+  background-image: url("../img/vacancies/vacancy-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.vacancy__director-top {
+  margin: 0 auto 3px;
+  text-align: center;
+}
+
+.vacancy__director-top img {
+  margin-bottom: 16px;
+}
+
+.vacancy__director-bottom .vacancy__director-footer {
+  margin: 0;
+}
+
+.vacancy__director-bottom .vacancies__director-quote {
+  font-weight: 400;
+  text-align: center;
+}
+
 .footer {
   padding: 160px 0 24px;
   background: #3F3F46;
@@ -8400,6 +8475,18 @@ body.locked {
     font-size: 14px;
   }
 
+  .vacancy__tablo {
+    padding: 24px;
+  }
+
+  .vacancy__title {
+    font-size: 30px;
+  }
+
+  .vacancy__subtitle {
+    font-size: 30px;
+  }
+
   .footer {
     padding: 60px 0 24px;
   }
@@ -9695,6 +9782,27 @@ body.locked {
 
   .vacancies__review-notation-item {
     font-size: 12px;
+  }
+
+  .vacancy__title {
+    font-size: 24px;
+  }
+
+  .vacancy__subtitle {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  .vacancy .vacancies__vacancies-experience {
+    margin-bottom: 24px;
+  }
+
+  .vacancy__director-footer .vacancies__director-quote {
+    padding: 0 10px;
+  }
+
+  .vacancy__director-bottom .vacancies__director-quote {
+    padding: 0 10px;
   }
 }
 
