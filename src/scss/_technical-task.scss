@@ -69,6 +69,7 @@
     padding: 40px 40px 46px;
     border-radius: 12px;
     background-color: var(--main-color);
+    overflow: hidden;
 
     @media (max-width: $breakpoint1450) {
       padding: 30px;
@@ -121,11 +122,11 @@
   // .technical-task__improvement-texts
 
   &__improvement-texts {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
 
-    @media (max-width: $breakpoint1450) {
-      margin-bottom: 30px;
-    }
+    // @media (max-width: $breakpoint1450) {
+    //   margin-bottom: 30px;
+    // }
   }
 
   // .technical-task__improvement-text
