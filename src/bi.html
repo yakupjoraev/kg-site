@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/aos.css">
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  @@include('./html/_header.html')
+
+  <!-- Main Page -->
+  <main>
+
+    @@include('./html/_bi.html')
+    @@include('./html/_calculation.html')
+    @@include('./html/_subscription-experts.html')
+    @@include('./html/_cases.html')
+    @@include('./html/_crm.html')
+    @@include('./html/_map.html')
+  </main>
+
+  <!-- Footer -->
+  @@include('./html/_footer.html')
+
+
+
+
+
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      class Anchor {
+        anchorClass
+        anchorList
+        constructor(params) {
+          this.anchorClass = params.anchorClass
+          this.init()
+        }
+        /**
+         * Инициализация     */
+        init() {
+          this.anchorList = document.querySelectorAll('.' + this.anchorClass)
+          this.addEvent()
+        }
+        /**     * Добавить события
+         */
+        addEvent() {
+          this.anchorList.forEach((anchor) => {
+            anchor.addEventListener('click', (event) => {
+              event.preventDefault()
+              const id = event.target.getAttribute('href')
+              document.getElementById(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              })
+            })
+          })
+          document.addEventListener('scroll', event => {
+            let fromTop = window.scrollY;
+            this.anchorList.forEach(anchor => {
+              const id = anchor.getAttribute('href')
+              let section = document.getElementById(id)
+              if (
+                section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop
+              ) {
+                anchor.classList.add('active');
+              } else {
+                anchor.classList.remove('active');
+              }
+            });
+          });
+        }
+      }
+
+      new Anchor({
+        anchorClass: 'bi__sistems-block',
+      })
+    })
+  </script>
+
+</body>
+
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/aos.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>

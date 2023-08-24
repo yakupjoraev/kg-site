@@ -1,4 +1,9 @@
 .technical-task {
+  padding-top: 90px;
+
+  @media (max-width: $breakpoint992) {
+    padding-top: 60px;
+  }
 
   .development-examples__title {
     text-align: left;
