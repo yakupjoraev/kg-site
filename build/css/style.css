@@ -7650,6 +7650,12 @@ body.locked {
     max-width: 300px;
   }
 
+  .integrated__video img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
   .integrated__video {
     width: 100%;
   }
