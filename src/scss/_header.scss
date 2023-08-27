@@ -313,3 +313,12 @@
 .header.contacts-item .contacts-item .menu__item-link::before {
   width: 120%;
 }
+
+.header--second {
+
+  .burger:after,
+  .burger:before,
+  .burger span {
+    background-color: var(--white-color);
+  }
+}
