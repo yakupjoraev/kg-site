@@ -29,6 +29,13 @@
     position: relative;
     flex: 0 1 560px;
 
+    img {
+      @media (max-width: $breakpoint992) {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
     iframe {
       border-radius: 6px;
     }
