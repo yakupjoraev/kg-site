@@ -1344,6 +1344,8 @@ body.locked {
   height: 200px;
   -o-object-fit: fill;
      object-fit: fill;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .cases__slide-title {
