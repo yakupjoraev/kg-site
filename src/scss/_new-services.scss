@@ -311,3 +311,34 @@
 //     transform: translateX(-216px);
 //   }
 // }
+
+
+
+
+
+.new-services--dark {
+  padding: 90px 0 190px;
+  background-color: #585960;
+  margin: 0;
+  color: var(--white-color);
+
+  .new-services__title {
+    color: var(--white-color);
+  }
+
+  .services__item {
+    background-color: var(--main-color);
+
+    &:hover {
+      background-color: var(--main-color) !important;
+    }
+  }
+
+  .services__link {
+    color: var(--white-color);
+  }
+
+  .services__more-arrow {
+    filter: invert(1);
+  }
+}

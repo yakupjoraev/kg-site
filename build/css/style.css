@@ -7440,6 +7440,148 @@ body.locked {
   }
 }
 
+.new-services--dark {
+  padding: 90px 0 190px;
+  background-color: #585960;
+  margin: 0;
+  color: var(--white-color);
+}
+
+.new-services--dark .new-services__title {
+  color: var(--white-color);
+}
+
+.new-services--dark .services__item {
+  background-color: var(--main-color);
+}
+
+.new-services--dark .services__item:hover {
+  background-color: var(--main-color) !important;
+}
+
+.new-services--dark .services__link {
+  color: var(--white-color);
+}
+
+.new-services--dark .services__more-arrow {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.get-quote {
+  padding: 80px 0 115px;
+  background-color: #585960;
+}
+
+.get-quote__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  border-radius: 24px;
+  background-color: #46474E;
+  background-image: url("../img/get-quote/get-quote-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.get-quote__employee {
+  position: relative;
+}
+
+.get-quote__employee-pic {
+  margin-top: -50px;
+}
+
+.get-quote__employee-info {
+  position: absolute;
+  bottom: 48px;
+  left: 22px;
+  padding: 32px;
+  border-radius: 12px;
+  background: rgba(88, 89, 96, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.get-quote__employee-name {
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
+
+.get-quote__employee-position {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  opacity: 0.6;
+}
+
+.get-quote__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 72px 0;
+}
+
+.get-quote__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--white-color);
+}
+
+.get-quote__quotters {
+  margin-bottom: 40px;
+}
+
+.get-quote__quotters img {
+  width: 40px;
+  height: 34px;
+}
+
+.get-quote__title {
+  margin-bottom: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 32px;
+}
+
+.get-quote__text {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 140%;
+}
+
+.get-quote__text span {
+  color: #FFA469;
+}
+
+.get-quote__btn {
+  margin-top: auto;
+  color: var(--main-color) !important;
+}
+
+.get-quote__instruction {
+  text-align: right;
+}
+
+.get-quote__instruction-plus {
+  margin-right: 120px;
+  margin-bottom: 24px;
+}
+
 .footer {
   padding: 160px 0 24px;
   background: #3F3F46;
@@ -9158,6 +9300,48 @@ body.locked {
     padding-bottom: 48px;
   }
 
+  .get-quote__employee-pic {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+
+  .get-quote__info-container {
+    padding: 30px 0;
+  }
+
+  .get-quote__quotters {
+    margin-bottom: 20px;
+  }
+
+  .get-quote__quotters img {
+    width: 30px;
+    height: auto;
+  }
+
+  .get-quote__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .get-quote__text {
+    font-size: 18px;
+  }
+
+  .get-quote__instruction-plus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin: 0 auto 24px;
+  }
+
+  .get-quote__instruction-pic {
+    max-width: 100%;
+  }
+
   .footer {
     padding: 60px 0 24px;
   }
@@ -10543,6 +10727,41 @@ body.locked {
             align-items: flex-start;
     row-gap: 20px;
   }
+
+  .get-quote {
+    padding: 60px 0;
+  }
+
+  .get-quote__employee-info {
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .get-quote__employee-name {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  .get-quote__employee-position {
+    font-size: 10px;
+  }
+
+  .get-quote__info-container {
+    padding: 10px;
+  }
+
+  .get-quote__title {
+    font-size: 20px;
+  }
+
+  .get-quote__text {
+    font-size: 16px;
+  }
+
+  .get-quote__instruction {
+    display: none;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -10701,6 +10920,29 @@ body.locked {
 
   .technical-task__comands-pic:nth-child(2) {
     max-width: 50%;
+  }
+
+  .get-quote__employee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .get-quote__employee-pic {
+    padding-left: 0;
+    margin-top: auto;
+  }
+
+  .get-quote__title {
+    font-size: 16px;
+  }
+
+  .get-quote__text {
+    font-size: 14px;
+  }
+
+  .get-quote__btn {
+    padding: 0 20px;
   }
 
   .footer__item-phone {
