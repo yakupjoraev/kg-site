@@ -35,14 +35,14 @@
       &:hover {
         z-index: 2;
         transform: scale(1.06);
-        box-shadow: 0 10px 65px rgba(43, 51, 60, .2);
+        box-shadow: 0 10px 65px rgba(43, 51, 60, .4);
       }
 
       &.grid-column-3 {
         &:hover {
           z-index: 2;
-          transform: scale(1.05);
-          box-shadow: 0 10px 65px rgba(43, 51, 60, .2);
+          transform: scale(1.06);
+          box-shadow: 0 10px 65px rgba(43, 51, 60, .4);
         }
 
       }
@@ -51,7 +51,7 @@
         &:hover {
           z-index: 2;
           transform: scale(1.03);
-          box-shadow: 0 10px 65px rgba(43, 51, 60, .2);
+          box-shadow: 0 10px 65px rgba(43, 51, 60, .4);
         }
 
       }
@@ -386,14 +386,14 @@
       &:hover {
         z-index: 2;
         transform: scale(1.06);
-        box-shadow: 0 10px 65px rgba(140, 140, 141, 0.2);
+        box-shadow: 0 10px 65px rgba(140, 140, 141, 0.4);
       }
 
       &.grid-column-3 {
         &:hover {
           z-index: 2;
-          transform: scale(1.05);
-          box-shadow: 0 10px 65px rgba(140, 140, 141, 0.2);
+          transform: scale(1.06);
+          box-shadow: 0 10px 65px rgba(140, 140, 141, 0.4);
         }
 
       }
@@ -402,7 +402,7 @@
         &:hover {
           z-index: 2;
           transform: scale(1.03);
-          box-shadow: 0 10px 65px rgba(140, 140, 141, 0.2);
+          box-shadow: 0 10px 65px rgba(140, 140, 141, 0.4);
         }
 
       }
