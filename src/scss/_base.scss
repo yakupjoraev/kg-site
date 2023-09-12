@@ -21,8 +21,8 @@
   transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
 
   &:hover {
-    background-color: var(--second-color);
-    color: var(--white-color);
+    // background-color: var(--second-color);
+    // color: var(--white-color);
     transform: scale(1.08);
   }
 }
@@ -49,8 +49,8 @@
   transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
 
   &:hover {
-    background-color: var(--second-color);
-    color: var(--white-color);
+    // background-color: var(--second-color);
+    // color: var(--white-color);
     transform: scale(1.08);
   }
 }

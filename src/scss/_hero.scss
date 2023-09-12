@@ -125,11 +125,11 @@
       background-color: transparent;
       border: 1.5px solid #D7D7D7;
 
-      &:hover {
-        border-color: transparent;
-        background-color: var(--second-color);
-        color: var(--white-color);
-      }
+      // &:hover {
+      //   border-color: transparent;
+      //   background-color: var(--second-color);
+      //   color: var(--white-color);
+      // }
     }
 
     @media (max-width: $breakpoint480) {
