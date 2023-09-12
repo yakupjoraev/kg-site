@@ -22,7 +22,7 @@
   .services__item {
     overflow: hidden;
 
-    transition: 0.2s linear;
+    transition: 0.2s ease;
 
 
     @media (max-width: $breakpoint992) {
@@ -373,7 +373,7 @@
   .services__item {
     overflow: hidden;
 
-    transition: 0.2s linear;
+    transition: 0.2s ease;
 
 
     @media (max-width: $breakpoint992) {

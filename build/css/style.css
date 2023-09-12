@@ -122,6 +122,22 @@ h6 {
   padding: 0 15px;
 }
 
+html {
+  font-feature-settings: "kern" 1, "liga" 0, "clig" 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 0, "clig" 0;
+  -ms-font-feature-settings: "kern" 1, "liga" 0, "clig" 0;
+  -o-font-feature-settings: "kern" 1, "liga" 0, "clig" 0;
+  -webkit-font-feature-settings: "kern" 1, "liga" 0, "clig" 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: 13px/18px haas, pragmatica, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Arial, sans-serif;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   background-color: var(--grey-color-2);
   font-family: "PF DinDisplay Pro", sans-serif;
@@ -7299,9 +7315,9 @@ body.locked {
 
 .new-services .services__item {
   overflow: hidden;
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .new-services .services__item .services__link {
@@ -7485,9 +7501,9 @@ body.locked {
 
 .new-services--dark .services__item {
   overflow: hidden;
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .get-quote {
