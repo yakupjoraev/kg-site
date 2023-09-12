@@ -18,11 +18,12 @@
   text-transform: uppercase;
   color: var(--main-color);
 
-  transition: background-color 0.2s linear, color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
 
   &:hover {
     background-color: var(--second-color);
     color: var(--white-color);
+    transform: scale(1.08);
   }
 }
 
@@ -45,11 +46,12 @@
   text-transform: uppercase;
   color: var(--main-color);
 
-  transition: background-color 0.2s linear, color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
 
   &:hover {
     background-color: var(--second-color);
     color: var(--white-color);
+    transform: scale(1.08);
   }
 }
 

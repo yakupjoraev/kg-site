@@ -252,14 +252,19 @@ body.locked {
   letter-spacing: 0.84px;
   text-transform: uppercase;
   color: var(--main-color);
-  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
-  -o-transition: background-color 0.2s linear, color 0.2s linear;
-  transition: background-color 0.2s linear, color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear, -webkit-transform 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, -webkit-transform 0.2s linear;
+  -o-transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .primary-btn:hover {
   background-color: var(--second-color);
   color: var(--white-color);
+  -webkit-transform: scale(1.08);
+      -ms-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 .secondary-btn {
@@ -284,14 +289,19 @@ body.locked {
   letter-spacing: 0.84px;
   text-transform: uppercase;
   color: var(--main-color);
-  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
-  -o-transition: background-color 0.2s linear, color 0.2s linear;
-  transition: background-color 0.2s linear, color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear, -webkit-transform 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, -webkit-transform 0.2s linear;
+  -o-transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .secondary-btn:hover {
   background-color: var(--second-color);
   color: var(--white-color);
+  -webkit-transform: scale(1.08);
+      -ms-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 .main-title {
