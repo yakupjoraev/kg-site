@@ -350,6 +350,10 @@
   margin: 0;
   color: var(--white-color);
 
+  .services__price-img {
+    filter: invert(1);
+  }
+
   .new-services__title {
     color: var(--white-color);
   }

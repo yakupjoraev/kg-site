@@ -7478,6 +7478,11 @@ body.locked {
   color: var(--white-color);
 }
 
+.new-services--dark .services__price-img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 .new-services--dark .new-services__title {
   color: var(--white-color);
 }
