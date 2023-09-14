@@ -950,3 +950,42 @@
     margin: 60px 0;
   }
 }
+
+
+.audit__analitic--white {
+  background-color: #e8e8e8;
+  background-image: url('../img/audit-analitic-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  color: var(--main-color);
+
+  .audit__analitic-title {
+    color: var(--main-color);
+  }
+
+  .audit__analitic-text {
+    font-weight: 300;
+    line-height: 140%;
+    color: var(--main-color);
+  }
+
+  .audit__analitic-btn {
+    margin-bottom: 0;
+    width: fit-content;
+    margin-top: auto;
+  }
+
+  .audit__analitic-name {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(17.5px);
+
+    h5 {
+      color: var(--main-color);
+    }
+
+    p {
+      color: var(--main-color);
+    }
+  }
+}
