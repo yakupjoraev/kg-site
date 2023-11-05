@@ -181,3 +181,29 @@
     line-height: 160%;
   }
 }
+
+.footer-landing {
+
+  .footer__list {
+    row-gap: 24px;
+
+  }
+
+  .footer__lists {
+
+    @media (max-width: $breakpoint992) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .footer__list:nth-child(2) {
+    max-width: 100%;
+  }
+}
+
+.footer__item-label {
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 100%;
+}
