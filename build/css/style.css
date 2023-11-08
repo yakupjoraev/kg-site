@@ -9459,6 +9459,8 @@ body.locked {
   border-radius: 12px;
   background: #46474F;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .landing-system__progresses {

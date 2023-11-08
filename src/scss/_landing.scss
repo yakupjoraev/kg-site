@@ -1814,7 +1814,6 @@
     margin-bottom: 64px;
     animation: fade 0.6s linear;
 
-
     @media (max-width: $breakpoint992) {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -1833,6 +1832,10 @@
     border-radius: 12px;
     background: #46474F;
     overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    // background-size: contain;
 
     @media (max-width: $breakpoint768) {
       padding: 20px;
