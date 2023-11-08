@@ -1601,6 +1601,8 @@
   line-height: 140%;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  cursor: pointer;
+
 
   @media (max-width: $breakpoint480) {
     padding: 10px;
@@ -1761,7 +1763,7 @@
   // .landing-system__inner
 
   &__inner {
-    margin-bottom: 64px;
+
 
     .landing-licenses__label {
       margin-bottom: 40px;
@@ -1809,6 +1811,8 @@
     padding: 16px;
     border-radius: 24px;
     background-color: #FFF;
+    margin-bottom: 64px;
+    animation: fade 0.6s linear;
 
 
     @media (max-width: $breakpoint992) {
@@ -1883,6 +1887,12 @@
         color: #fff;
       }
 
+      .landing-system__progress-border {
+        background-color: #FFA469;
+      }
+    }
+
+    &.active-border {
       .landing-system__progress-border {
         background-color: #FFA469;
       }
@@ -1981,10 +1991,15 @@
   // .landing-system__step-descr
 
   &__step-descr {
+    margin-bottom: 40px;
     color: #FFF;
     font-size: 16px;
     font-weight: 300;
     line-height: 140%;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 20px;
+    }
   }
 
   // .landing-system__lite
@@ -2001,6 +2016,7 @@
 
     @media (max-width: $breakpoint768) {
       padding: 20px;
+      row-gap: 30px;
     }
 
     h3 {

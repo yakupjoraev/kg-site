@@ -408,5 +408,23 @@ function auditSticky() {
 auditSticky();
 
 
+function systemSteps() {
+  const container = document.querySelector('.landing-system');
 
+  if (!container) {
+    return null
+  }
 
+  let stepItems = document.querySelectorAll('[data-landing-system-step]');
+  const stepBtn = document.querySelector('[data-landing-system-btn]');
+
+  stepBtn.addEventListener('click', () => {
+    stepItems.forEach(stepItem => {
+      stepItem.style.display = "grid";
+      stepBtn.style.display = "none";
+    });
+  })
+
+}
+
+systemSteps()

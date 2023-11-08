@@ -9306,6 +9306,7 @@ body.locked {
   line-height: 140%;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .landing-crm {
@@ -9393,10 +9394,6 @@ body.locked {
   margin-bottom: 164px;
 }
 
-.landing-system__inner {
-  margin-bottom: 64px;
-}
-
 .landing-system__inner .landing-licenses__label {
   margin-bottom: 40px;
 }
@@ -9445,6 +9442,9 @@ body.locked {
   padding: 16px;
   border-radius: 24px;
   background-color: #FFF;
+  margin-bottom: 64px;
+  -webkit-animation: fade 0.6s linear;
+          animation: fade 0.6s linear;
 }
 
 .landing-system__dark {
@@ -9509,6 +9509,10 @@ body.locked {
 }
 
 .landing-system__progress.active .landing-system__progress-border {
+  background-color: #FFA469;
+}
+
+.landing-system__progress.active-border .landing-system__progress-border {
   background-color: #FFA469;
 }
 
@@ -9591,6 +9595,7 @@ body.locked {
 }
 
 .landing-system__step-descr {
+  margin-bottom: 40px;
   color: #FFF;
   font-size: 16px;
   font-weight: 300;
@@ -13710,8 +13715,13 @@ body.locked {
     margin-bottom: 20px;
   }
 
+  .landing-system__step-descr {
+    margin-bottom: 20px;
+  }
+
   .landing-system__lite {
     padding: 20px;
+    row-gap: 30px;
   }
 
   .landing-system__lite h3 {
