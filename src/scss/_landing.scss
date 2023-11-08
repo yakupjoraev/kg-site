@@ -323,7 +323,7 @@
   &::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -12px;
     right: -20px;
     width: 1292px;
     height: 884.569px;
@@ -335,6 +335,11 @@
 
   @media (max-width: $breakpoint992) {
     padding-top: 120px;
+
+    &::before {
+      width: 100%;
+      height: 400px;
+    }
   }
 
 
@@ -871,6 +876,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 280px;
 
     @media (max-width: $breakpoint992) {
       width: 140px;
