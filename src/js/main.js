@@ -1,3 +1,4 @@
+// Custom Scripts
 // Custom scripts
 // Мобильное меню бургер
 function burgerMenu() {
@@ -273,6 +274,21 @@ function stepsAnimation() {
 stepsAnimation();
 
 // Аккордеон
+
+const accordionItems = document.querySelectorAll('[data-accordion-item]');
+accordionItems.forEach(function (element) {
+  element.addEventListener('click', function () {
+    accordionItems.forEach(function (element) {
+      let wrapper = element.closest('.leaders__row')
+      wrapper.classList.remove('active')
+    })
+    const header = this
+    let wrapper = header.closest('.leaders__row')
+    wrapper.classList.add('active')
+  })
+})
+
+/*
 const accordionItems = document.querySelectorAll('[data-accordion-item]');
 let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон
 
@@ -316,14 +332,7 @@ if (firstAccordionItem) {
 }
 
 accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
-
-
-
-
-
-
-
-
+*/
 
 function faqList() {
   const list = document.querySelector('[data-faq-list]');
@@ -406,6 +415,7 @@ function auditSticky() {
 }
 
 auditSticky();
+
 
 
 function systemSteps() {
