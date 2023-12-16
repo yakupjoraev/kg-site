@@ -97,6 +97,7 @@
     }
 
     @media (max-width: $breakpoint768) {
+      display: flex;
       height: 120px;
       max-width: 160px;
     }
@@ -545,23 +546,26 @@
 
 
 
-
 .automatic-hr__steps {
+  margin-bottom: 180px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 60px;
+  }
+
   .audit__steps {
     margin: 0;
+    margin-bottom: 20px;
   }
-
-  .audit__steps-inner {}
 
   .audit__steps-aside {
-    top: 100px;
+    top: 160px;
+    row-gap: 40px;
   }
-
-  .audit__steps-aside-title {}
-
-  .audit__steps-aside-descr {}
-
-  .audit__steps-list {}
 
   .audit__steps-item {
     border: 0;
@@ -571,6 +575,19 @@
 
     &.active {
       background-color: var(--grey-color-2);
+    }
+
+    &:last-child {
+      padding-bottom: 40px;
+
+      @media (max-width: $breakpoint768) {
+        padding-bottom: 0;
+      }
+
+    }
+
+    @media (max-width: $breakpoint768) {
+      background-color: transparent;
     }
   }
 
@@ -590,32 +607,297 @@
     text-align: center;
     color: var(--grey-color-2);
     text-shadow: -1px 0 0 #FFCB75, 1px 0 0 #FFCB75, 0 -1px 0 #FFCB75, 0 1px 0 #FFCB75;
+
+    @media (max-width: $breakpoint992) {
+      padding: 20px 20px 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 10px 0 0;
+      margin: 0 auto;
+      text-align: center;
+      border: 0;
+      font-size: 60px;
+      height: 60px;
+    }
   }
 
   .audit__steps-count {
     height: 100px;
     font-size: 100px;
     font-weight: 900;
+
+    @media (max-width: $breakpoint768) {
+      font-size: 60px;
+      height: 60px;
+    }
   }
 
   .audit__steps-info {
-    padding: 40px 0 60px;
+    padding: 40px 40px 60px 0;
     row-gap: 16px;
+
+    @media (max-width: $breakpoint992) {
+      padding: 40px 40px 20px 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 30px 20px;
+    }
   }
 
   .audit__steps-item-title {
     font-size: 23px;
   }
 
-  .audit__steps-item-descr {}
-
   .course__comands-list {
     margin-bottom: 0;
   }
 
-  .course__comands-item {}
+  .course__comands-pic {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 
-  .course__comands-pic {}
+.automatic-hr__steps-picture {
+  max-width: 100%;
+}
 
-  .course__comands-item-name {}
+.automatic-hr__pricing-title {
+  margin-bottom: 64px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 40px;
+  }
+}
+
+.automatic-hr__pricing {
+  .bi__analitics {
+    align-items: flex-start;
+    column-gap: 70px;
+    padding: 16px 16px 16px 64px;
+
+    @media (max-width: $breakpoint992) {
+      padding: 16px;
+    }
+  }
+
+  .bi__analitics-main {
+    min-width: 264px;
+  }
+
+  .bi__analitics-steps {
+    max-width: 768px;
+
+    display: grid;
+    grid-template-columns: 256px 2px 1fr;
+    column-gap: 40px;
+    background-color: #f4f0f0;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr 2px 1fr;
+    }
+
+    @media (max-width: $breakpoint992) {
+      max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &::before {
+      content: none;
+    }
+
+    .bi__analitics-step-border {
+      width: 2px;
+      min-width: 2px;
+      height: 100%;
+      background-color: #D7D7D7;
+      margin: auto 0;
+
+      @media (max-width: $breakpoint768) {
+        width: 100%;
+        height: 2px;
+      }
+    }
+
+    .bi__analitics-step-text {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 140%;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+
+        @media (max-width: $breakpoint768) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .bi__analitics-prices {
+      @media (max-width: $breakpoint992) {
+        margin-bottom: 0;
+      }
+    }
+
+    .bi__analitics-step-header {
+      @media (max-width: $breakpoint768) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.bi__analitics-price--descr {
+  img {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  span {
+    margin: 0;
+  }
+
+  .bi__analitics-price--descr-font {
+    font-size: 15px;
+  }
+}
+
+.automatic-hr__pricing {
+  .bi__analitics--dark {
+    position: relative;
+    padding-bottom: 370px;
+
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 400px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding-bottom: 200px;
+    }
+
+    .bi__analitics-steps {
+      background-color: #585960;
+    }
+
+    .bi__analitics-step-border {
+      background-color: #464750;
+    }
+
+    .bi__analitics-steps--second {
+      position: relative;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 16px;
+      background-color: transparent;
+      border: 1px solid #585961;
+
+      @media (max-width: $breakpoint768) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 0;
+      }
+    }
+
+  }
+
+}
+
+.bi__analitics-steps--second {
+  .bi__analitics-step-header {
+    margin-bottom: 20px;
+  }
+
+  .bi__analitics-item {
+    font-size: 17px;
+  }
+
+  .bi__analitics-step-text {
+    margin-bottom: 16px;
+  }
+}
+
+.bi__analitics-step-pic--none {
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bi__analitics-omg {
+  position: absolute;
+  bottom: -70px;
+  left: 50px;
+  max-width: 100%;
+  width: calc(100% - 100px);
+
+  @media (max-width: $breakpoint768) {
+    bottom: -20px;
+    width: calc(100% - 20px);
+    left: 10px;
+  }
+}
+
+.bi__analitics-specialist {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 160px;
+
+  @media (max-width: $breakpoint992) {
+    margin-top: 0;
+  }
+}
+
+.bi__analitics-specialist-top {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.bi__analitics-specialist-info {
+  color: var(--white-color);
+}
+
+.bi__analitics-specialist-name {
+  margin-bottom: 14px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
+
+.bi__analitics-specialist-position {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  opacity: 0.6;
+}
+
+.bi__analitics-specialist-text {
+  color: var(--white-color);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+
+  span {
+    display: block;
+    text-align: left;
+    margin-left: -10px;
+    padding: 0 3px 0 10px;
+    border-radius: 20px;
+    background-color: #FF9F5C;
+    color: var(--main-color);
+  }
 }
