@@ -377,6 +377,7 @@
     column-gap: 8px;
 
     span {
+      margin-bottom: 4px;
       font-size: 56px;
       font-style: normal;
       font-weight: 200;
@@ -400,7 +401,7 @@
     line-height: normal;
     text-align: center;
     color: var(--main-color);
-    text-shadow: -1px 0 0 #FFCB75, 1px 0 0 #FFCB75, 0 -1px 0 #FFCB75, 0 1px 0 #FFCB75;
+    text-shadow: -2px 0 0 #FFCB75, 2px 0 0 #FFCB75, 0 -2px 0 #FFCB75, 0 2px 0 #FFCB75;
   }
 
   &__why-footer-text {
